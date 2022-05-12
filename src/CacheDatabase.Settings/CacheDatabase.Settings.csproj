@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>CP.CacheDatabase.Settings</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ReactiveMarbles.CacheDatabase.NewtonsoftJson" Version="1.0.18" />
+		<PackageReference Include="ReactiveMarbles.CacheDatabase.Sqlite3" Version="1.0.18" />
+		<PackageReference Include="ReactiveMarbles.Locator" Version="1.1.4" />
+	</ItemGroup>
+
+</Project>
