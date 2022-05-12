@@ -8,8 +8,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="ReactiveMarbles.CacheDatabase.NewtonsoftJson" Version="1.0.18" />
-		<PackageReference Include="ReactiveMarbles.CacheDatabase.Sqlite3" Version="1.0.18" />
+		<PackageReference Include="ReactiveMarbles.Locator" Version="1.1.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\CacheDatabase.Settings\CacheDatabase.Settings.csproj" />
 	</ItemGroup>
 
 </Project>

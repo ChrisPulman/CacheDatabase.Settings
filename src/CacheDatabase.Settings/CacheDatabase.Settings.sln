@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDatabase.Settings", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDatabase.Settings.App", "..\CacheDatabase.Settings.App\CacheDatabase.Settings.App.csproj", "{D89A4536-0AD0-488A-B28E-C6912D9941F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDatabase.Settings.Locator", "..\CacheDatabase.Settings.Locator\CacheDatabase.Settings.Locator.csproj", "{FA74859F-0EFE-4F88-B905-67442289360E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDatabase.Settings.Splat", "..\CacheDatabase.Settings.Splat\CacheDatabase.Settings.Splat.csproj", "{65E64C80-024D-45BD-BEFB-917FB9999B95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D89A4536-0AD0-488A-B28E-C6912D9941F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D89A4536-0AD0-488A-B28E-C6912D9941F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D89A4536-0AD0-488A-B28E-C6912D9941F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA74859F-0EFE-4F88-B905-67442289360E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA74859F-0EFE-4F88-B905-67442289360E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA74859F-0EFE-4F88-B905-67442289360E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA74859F-0EFE-4F88-B905-67442289360E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65E64C80-024D-45BD-BEFB-917FB9999B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65E64C80-024D-45BD-BEFB-917FB9999B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65E64C80-024D-45BD-BEFB-917FB9999B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65E64C80-024D-45BD-BEFB-917FB9999B95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

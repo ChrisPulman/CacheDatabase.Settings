@@ -9,7 +9,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\CacheDatabase.Settings\CacheDatabase.Settings.csproj" />
+	  <ProjectReference Include="..\CacheDatabase.Settings.Locator\CacheDatabase.Settings.Locator.csproj" />
 	</ItemGroup>
 
 </Project>
