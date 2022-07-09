@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDatabase.Settings", "CacheDatabase.Settings.csproj", "{40DBC160-9940-4906-9B55-DCD2E1EDCA21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.Settings", "CacheDatabase.Settings\CacheDatabase.Settings.csproj", "{40DBC160-9940-4906-9B55-DCD2E1EDCA21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDatabase.Settings.App", "..\CacheDatabase.Settings.App\CacheDatabase.Settings.App.csproj", "{D89A4536-0AD0-488A-B28E-C6912D9941F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.Settings.App", "CacheDatabase.Settings.App\CacheDatabase.Settings.App.csproj", "{D89A4536-0AD0-488A-B28E-C6912D9941F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDatabase.Settings.Locator", "..\CacheDatabase.Settings.Locator\CacheDatabase.Settings.Locator.csproj", "{FA74859F-0EFE-4F88-B905-67442289360E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.Settings.Locator", "CacheDatabase.Settings.Locator\CacheDatabase.Settings.Locator.csproj", "{FA74859F-0EFE-4F88-B905-67442289360E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDatabase.Settings.Splat", "..\CacheDatabase.Settings.Splat\CacheDatabase.Settings.Splat.csproj", "{65E64C80-024D-45BD-BEFB-917FB9999B95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.Settings.Splat", "CacheDatabase.Settings.Splat\CacheDatabase.Settings.Splat.csproj", "{65E64C80-024D-45BD-BEFB-917FB9999B95}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.SecureSettings", "CacheDatabase.SecureSettings\CacheDatabase.SecureSettings.csproj", "{56186A69-9606-4D24-AAE1-BC338E257F18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{65E64C80-024D-45BD-BEFB-917FB9999B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65E64C80-024D-45BD-BEFB-917FB9999B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65E64C80-024D-45BD-BEFB-917FB9999B95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56186A69-9606-4D24-AAE1-BC338E257F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56186A69-9606-4D24-AAE1-BC338E257F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56186A69-9606-4D24-AAE1-BC338E257F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56186A69-9606-4D24-AAE1-BC338E257F18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

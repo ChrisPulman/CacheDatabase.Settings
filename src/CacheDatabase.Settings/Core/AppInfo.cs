@@ -1,9 +1,18 @@
-﻿using ReactiveMarbles.CacheDatabase.Core;
+﻿using CP.CacheDatabase.Settings.Core;
+using ReactiveMarbles.CacheDatabase.Core;
+#if IS_SECURE
+using ReactiveMarbles.CacheDatabase.EncryptedSqlite3;
+#else
 using ReactiveMarbles.CacheDatabase.Sqlite3;
+#endif
 using System.Diagnostics;
 using System.Reflection;
 
-namespace CP.CacheDatabase.Settings.Core
+#if IS_SECURE
+namespace CP.CacheDatabase.SecureSettings
+#else
+namespace CP.CacheDatabase.Settings
+#endif
 {
     /// <summary>
     /// App Info.
@@ -44,11 +53,34 @@ namespace CP.CacheDatabase.Settings.Core
             _settingsCache = new Lazy<IBlobCache>(() => new InMemoryBlobCache());
             SettingsCache = _settingsCache.Value;
             ExecutingAssemblyName = ExecutingAssembly.FullName!.Split(',')[0];
-            
+
             ApplicationRootPath = Path.Combine(Path.GetDirectoryName(ExecutingAssembly.Location)!, "..");
             SettingsCachePath = Path.Combine(ApplicationRootPath, "SettingsCache");
             Version = ExecutingAssembly.GetName().Version;
         }
+
+#if IS_SECURE
+        /// <summary>
+        /// Setup the secure settings store.
+        /// </summary>
+        /// <typeparam name="T">The Type of settings store.</typeparam>
+        /// <param name="password">Secure password.</param>
+        /// <param name="inUnitTest">In a Unit Test.</param>
+        /// <returns>The Settings store.</returns>
+        public static T? SetupSecureSettingsStore<T>(string password, bool inUnitTest = false)
+            where T : SettingsStorage?, new()
+        {
+            if (!inUnitTest)
+            {
+                Directory.CreateDirectory(SettingsCachePath!);
+                SettingsCache = new EncryptedSqliteBlobCache(Path.Combine(SettingsCachePath!, $"{typeof(T).Name}.db"), password);
+            }
+
+            var viewSettings = inUnitTest ? (T?)Activator.CreateInstance(typeof(T), new InMemoryBlobCache()) : new();
+            viewSettings?.InitializeAsync().Wait();
+            return viewSettings;
+        }
+#else
 
         /// <summary>
         /// Setup the settings store.
@@ -69,5 +101,6 @@ namespace CP.CacheDatabase.Settings.Core
             viewSettings?.InitializeAsync().Wait();
             return viewSettings;
         }
+#endif
     }
 }

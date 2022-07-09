@@ -1,5 +1,4 @@
-﻿using CP.CacheDatabase.Settings.Core;
-using ReactiveMarbles.Locator;
+﻿using ReactiveMarbles.Locator;
 
 namespace CP.CacheDatabase.Settings.Locator
 {

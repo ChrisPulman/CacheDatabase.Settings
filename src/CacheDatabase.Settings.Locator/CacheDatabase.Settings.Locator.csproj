@@ -5,6 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<RootNamespace>CP.CacheDatabase.Settings</RootNamespace>
+		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -12,7 +13,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\CacheDatabase.Settings\CacheDatabase.Settings.csproj" />
+		<ProjectReference Include="..\CacheDatabase.SecureSettings\CacheDatabase.SecureSettings.csproj" />
 	</ItemGroup>
 
 </Project>

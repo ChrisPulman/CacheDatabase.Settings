@@ -1,11 +1,12 @@
-﻿using ReactiveMarbles.CacheDatabase.Core;
+﻿using CP.CacheDatabase.Settings;
+using ReactiveMarbles.CacheDatabase.Core;
 using ReactiveMarbles.CacheDatabase.NewtonsoftJson;
 using System.ComponentModel;
 using System.Reactive.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace CP.CacheDatabase.Settings
+namespace CP.CacheDatabase
 {
     public abstract class SettingsStorage : INotifyPropertyChanged
     {

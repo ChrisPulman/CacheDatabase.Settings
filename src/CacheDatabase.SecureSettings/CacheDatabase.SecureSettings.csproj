@@ -6,11 +6,20 @@
 		<Nullable>enable</Nullable>
 		<RootNamespace>CP.CacheDatabase.Settings</RootNamespace>
 		<LangVersion>latest</LangVersion>
+		<DefineConstants>IS_SECURE</DefineConstants>
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Include="..\CacheDatabase.Settings\Core\AppInfo.cs" Link="AppInfo.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ReactiveMarbles.CacheDatabase.EncryptedSqlite3" Version="1.0.35" />
 		<PackageReference Include="ReactiveMarbles.CacheDatabase.NewtonsoftJson" Version="1.0.35" />
-		<PackageReference Include="ReactiveMarbles.CacheDatabase.Sqlite3" Version="1.0.35" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\CacheDatabase.Settings\CacheDatabase.Settings.csproj" />
 	</ItemGroup>
 
 </Project>
