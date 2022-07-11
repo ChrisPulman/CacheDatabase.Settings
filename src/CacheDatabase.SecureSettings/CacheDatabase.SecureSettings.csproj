@@ -10,16 +10,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Include="..\CacheDatabase.Settings\Core\AppInfo.cs" Link="AppInfo.cs" />
+	  <Compile Include="..\CacheDatabase.Settings\Core\*.cs" LinkBase="Core" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Include="..\CacheDatabase.Settings\ExceptionHelper.cs" Link="ExceptionHelper.cs" />
+	  <Compile Include="..\CacheDatabase.Settings\Extensions.cs" Link="Extensions.cs" />
+	  <Compile Include="..\CacheDatabase.Settings\SettingsStorage.cs" Link="SettingsStorage.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="ReactiveMarbles.CacheDatabase.EncryptedSqlite3" Version="1.0.35" />
 		<PackageReference Include="ReactiveMarbles.CacheDatabase.NewtonsoftJson" Version="1.0.35" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\CacheDatabase.Settings\CacheDatabase.Settings.csproj" />
-	</ItemGroup>
-
 </Project>

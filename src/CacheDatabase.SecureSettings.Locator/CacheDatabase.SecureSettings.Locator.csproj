@@ -13,7 +13,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\CacheDatabase.Settings\CacheDatabase.Settings.csproj" />
+		<ProjectReference Include="..\CacheDatabase.SecureSettings\CacheDatabase.SecureSettings.csproj" />
 	</ItemGroup>
 
 </Project>

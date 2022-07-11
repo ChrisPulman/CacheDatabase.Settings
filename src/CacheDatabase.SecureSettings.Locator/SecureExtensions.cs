@@ -17,7 +17,7 @@ namespace CP.CacheDatabase.SecureSettings.Locator
         public static T? SetupSettingsStore<T>(this IEditServices @this, string? password = null, bool inUnitTest = false)
             where T : SettingsStorage?, new()
         {
-            var viewSettings = AppInfo.SetupSecureSettingsStore<T>((password ?? AppInfo.ExecutingAssemblyName)!, inUnitTest);
+            var viewSettings = AppInfo.SetupSettingsStore<T>((password ?? AppInfo.ExecutingAssemblyName)!, inUnitTest);
             viewSettings?.InitializeAsync().Wait();
             @this.AddLazySingleton(() => viewSettings!, typeof(T).Name);
             return viewSettings;

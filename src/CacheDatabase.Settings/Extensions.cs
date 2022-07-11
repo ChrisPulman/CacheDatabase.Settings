@@ -15,8 +15,7 @@ namespace CP.CacheDatabase.Settings
             return blobCache.GetObject<T>(key).Catch<T?, Exception>(ex =>
             {
                 var value = fetchFunc();
-                blobCache.InsertObject(key, value).Wait();
-                return Observable.Return(value);
+                return blobCache.InsertObject(key, value).Select(_ => value);
             });
         }
     }

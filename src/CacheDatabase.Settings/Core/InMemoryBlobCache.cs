@@ -51,9 +51,7 @@ namespace CP.CacheDatabase.Settings.Core
         public ValueTask DisposeAsync()
         {
             Dispose(false);
-#pragma warning disable CA1816 // Dispose methods should call SuppressFinalize
             GC.SuppressFinalize(this);
-#pragma warning restore CA1816 // Dispose methods should call SuppressFinalize
             return default;
         }
 

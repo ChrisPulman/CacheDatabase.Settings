@@ -5,7 +5,7 @@ namespace CacheDatabase.Settings.App
     public class ViewSettings : SettingsBase
     {
         public ViewSettings()
-            : base(nameof(ViewSettings), null)
+            : base(nameof(ViewSettings))
         { }
         public bool BoolTest
         {

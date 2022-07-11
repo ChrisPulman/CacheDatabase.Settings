@@ -1,11 +1,15 @@
 ﻿using ReactiveMarbles.CacheDatabase.Core;
+#if IS_SECURE
+using CP.CacheDatabase.SecureSettings;
+#endif
 
 namespace CP.CacheDatabase.Settings.Core
 {
+
     /// <summary>
-    /// Empty Base.
+    /// SettingsBase.
     /// </summary>
-    /// <seealso cref="AICS.SettingsStorage" />
+    /// <seealso cref="CP.CacheDatabase.SettingsStorage" />
     public abstract class SettingsBase : SettingsStorage
     {
         /// <summary>

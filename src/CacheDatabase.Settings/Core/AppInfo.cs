@@ -67,7 +67,7 @@ namespace CP.CacheDatabase.Settings
         /// <param name="password">Secure password.</param>
         /// <param name="inUnitTest">In a Unit Test.</param>
         /// <returns>The Settings store.</returns>
-        public static T? SetupSecureSettingsStore<T>(string password, bool inUnitTest = false)
+        public static async Task<T?> SetupSettingsStore<T>(string password, bool inUnitTest = false)
             where T : SettingsStorage?, new()
         {
             if (!inUnitTest)
@@ -77,7 +77,7 @@ namespace CP.CacheDatabase.Settings
             }
 
             var viewSettings = inUnitTest ? (T?)Activator.CreateInstance(typeof(T), new InMemoryBlobCache()) : new();
-            viewSettings?.InitializeAsync().Wait();
+            await viewSettings!.InitializeAsync().ConfigureAwait(false);
             return viewSettings;
         }
 #else
@@ -88,7 +88,7 @@ namespace CP.CacheDatabase.Settings
         /// <typeparam name="T">The Type of settings store.</typeparam>
         /// <param name="inUnitTest">In a Unit Test.</param>
         /// <returns>The Settings store.</returns>
-        public static T? SetupSettingsStore<T>(bool inUnitTest = false)
+        public static async Task<T?> SetupSettingsStore<T>(bool inUnitTest = false)
             where T : SettingsStorage?, new()
         {
             if (!inUnitTest)
@@ -98,7 +98,7 @@ namespace CP.CacheDatabase.Settings
             }
 
             var viewSettings = inUnitTest ? (T?)Activator.CreateInstance(typeof(T), new InMemoryBlobCache()) : new();
-            viewSettings?.InitializeAsync().Wait();
+            await viewSettings!.InitializeAsync().ConfigureAwait(false);
             return viewSettings;
         }
 #endif

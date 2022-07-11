@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
@@ -9,11 +9,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="ReactiveMarbles.Locator" Version="1.1.4" />
+		<PackageReference Include="Splat" Version="14.3.4" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\CacheDatabase.Settings\CacheDatabase.Settings.csproj" />
+	  <ProjectReference Include="..\CacheDatabase.SecureSettings\CacheDatabase.SecureSettings.csproj" />
 	</ItemGroup>
-
 </Project>

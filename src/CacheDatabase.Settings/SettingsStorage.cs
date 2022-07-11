@@ -14,6 +14,7 @@ namespace CP.CacheDatabase
         private readonly Dictionary<string, object?> _cache;
         private readonly ReaderWriterLockSlim _cacheLock;
         private readonly string _keyPrefix;
+
         /// <summary>
         /// Occurs when a property value changes.
         /// </summary>
