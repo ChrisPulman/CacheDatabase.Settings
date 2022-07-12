@@ -3,19 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.Settings", "CacheDatabase.Settings\CacheDatabase.Settings.csproj", "{40DBC160-9940-4906-9B55-DCD2E1EDCA21}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.Settings.App", "CacheDatabase.Settings.App\CacheDatabase.Settings.App.csproj", "{D89A4536-0AD0-488A-B28E-C6912D9941F8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.Settings.Locator", "CacheDatabase.Settings.Locator\CacheDatabase.Settings.Locator.csproj", "{FA74859F-0EFE-4F88-B905-67442289360E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.Settings.Splat", "CacheDatabase.Settings.Splat\CacheDatabase.Settings.Splat.csproj", "{65E64C80-024D-45BD-BEFB-917FB9999B95}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.SecureSettings", "CacheDatabase.SecureSettings\CacheDatabase.SecureSettings.csproj", "{56186A69-9606-4D24-AAE1-BC338E257F18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.SecureSettings.Locator", "CacheDatabase.SecureSettings.Locator\CacheDatabase.SecureSettings.Locator.csproj", "{3EFF6CDF-D3A2-4B06-8996-D507D6088BC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDatabase.SecureSettings.Locator", "CacheDatabase.SecureSettings.Locator\CacheDatabase.SecureSettings.Locator.csproj", "{3EFF6CDF-D3A2-4B06-8996-D507D6088BC0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDatabase.SecureSettings.Splat", "CacheDatabase.SecureSettings.Splat\CacheDatabase.SecureSettings.Splat.csproj", "{7BE5616B-58CA-4A8B-A9F9-1FC4CED064F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheDatabase.SecureSettings.Splat", "CacheDatabase.SecureSettings.Splat\CacheDatabase.SecureSettings.Splat.csproj", "{7BE5616B-58CA-4A8B-A9F9-1FC4CED064F9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecureSettings", "SecureSettings", "{B6116B67-BE2F-46CE-A5B9-2C8BA3090664}"
 EndProject
@@ -27,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{40DBC160-9940-4906-9B55-DCD2E1EDCA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40DBC160-9940-4906-9B55-DCD2E1EDCA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40DBC160-9940-4906-9B55-DCD2E1EDCA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40DBC160-9940-4906-9B55-DCD2E1EDCA21}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D89A4536-0AD0-488A-B28E-C6912D9941F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D89A4536-0AD0-488A-B28E-C6912D9941F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D89A4536-0AD0-488A-B28E-C6912D9941F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,10 +35,6 @@ Global
 		{65E64C80-024D-45BD-BEFB-917FB9999B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65E64C80-024D-45BD-BEFB-917FB9999B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65E64C80-024D-45BD-BEFB-917FB9999B95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{56186A69-9606-4D24-AAE1-BC338E257F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56186A69-9606-4D24-AAE1-BC338E257F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56186A69-9606-4D24-AAE1-BC338E257F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56186A69-9606-4D24-AAE1-BC338E257F18}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3EFF6CDF-D3A2-4B06-8996-D507D6088BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3EFF6CDF-D3A2-4B06-8996-D507D6088BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EFF6CDF-D3A2-4B06-8996-D507D6088BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -60,10 +48,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{40DBC160-9940-4906-9B55-DCD2E1EDCA21} = {5E28FA99-C9EC-41D3-BD2F-158A1212F7FA}
 		{FA74859F-0EFE-4F88-B905-67442289360E} = {5E28FA99-C9EC-41D3-BD2F-158A1212F7FA}
 		{65E64C80-024D-45BD-BEFB-917FB9999B95} = {5E28FA99-C9EC-41D3-BD2F-158A1212F7FA}
-		{56186A69-9606-4D24-AAE1-BC338E257F18} = {B6116B67-BE2F-46CE-A5B9-2C8BA3090664}
 		{3EFF6CDF-D3A2-4B06-8996-D507D6088BC0} = {B6116B67-BE2F-46CE-A5B9-2C8BA3090664}
 		{7BE5616B-58CA-4A8B-A9F9-1FC4CED064F9} = {B6116B67-BE2F-46CE-A5B9-2C8BA3090664}
 	EndGlobalSection

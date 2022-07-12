@@ -1,4 +1,5 @@
-﻿using CP.CacheDatabase.Settings.Core;
+﻿
+using ReactiveMarbles.CacheDatabase.Settings;
 
 namespace CacheDatabase.Settings.App
 {

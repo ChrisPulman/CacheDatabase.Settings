@@ -1,5 +1,6 @@
 ﻿using CP.CacheDatabase.Settings.Locator;
 using ReactiveMarbles.Locator;
+using System.Reactive.Linq;
 using System.Windows;
 
 namespace CacheDatabase.Settings.App
@@ -13,16 +14,19 @@ namespace CacheDatabase.Settings.App
         {
             InitializeComponent();
             var locator = new ServiceLocator();
-            locator.SetupSettingsStore<ViewSettings>();
-
-            var viewSettings = locator.GetService<ViewSettings>(nameof(ViewSettings));
-            if (viewSettings != null)
+            Observable.Start(async () =>
             {
-                var a = viewSettings.FloatTest;
-                var b = viewSettings.StringTest;
-                var c = viewSettings.IntTest;
-                var d = viewSettings.BoolTest;
-            }
+                await locator.SetupSettingsStore<ViewSettings>();
+
+                var viewSettings = locator.GetService<ViewSettings>(nameof(ViewSettings));
+                if (viewSettings != null)
+                {
+                    var a = viewSettings.FloatTest;
+                    var b = viewSettings.StringTest;
+                    var c = viewSettings.IntTest;
+                    var d = viewSettings.BoolTest;
+                }
+            });
         }
     }
 }

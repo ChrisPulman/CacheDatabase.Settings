@@ -9,11 +9,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Splat" Version="14.3.4" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\CacheDatabase.Settings\CacheDatabase.Settings.csproj" />
+		<PackageReference Include="ReactiveMarbles.CacheDatabase.Settings" Version="1.1.1" />
+		<PackageReference Include="Splat" Version="14.3.4" />
 	</ItemGroup>
 
 </Project>
